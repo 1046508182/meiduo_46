@@ -15,7 +15,35 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.http import HttpResponse
+
+
+def test(request):
+    # 1.导入系统日志库
+    import logging
+
+    # 2.创建/获取日志器
+    # name: 获取logs中的日志器
+    logger = logging.getLogger("django")
+
+    # 3.根据日志的等级来记录日志
+    # try:
+    #     pass
+    # except Exception as e:
+    #     loggererror(e)
+
+    logger.info("abcd")
+    logger.warning("119119")
+    logger.error("error...")
+
+
+
+    return HttpResponse("test")
+
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'test/$',test)
 ]
