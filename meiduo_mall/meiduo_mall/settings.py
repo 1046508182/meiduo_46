@@ -25,7 +25,11 @@ SECRET_KEY = 'c4preav4frnw%dv^e)kui88^q-*$*5b5s2o)gmx1p4k)n%9a=9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 允许以哪些主句访问
+# 默认是127.0.0.1
+# 如果以域名的形式访问，就把域名以字符串的形式添加就可以
+# 添加了域名之后，默认的127 就不能访问了，所以再加一个就可以了
+ALLOWED_HOSTS = ["www.meiduo.site","127.0.0.1"]
 
 
 # Application definition
