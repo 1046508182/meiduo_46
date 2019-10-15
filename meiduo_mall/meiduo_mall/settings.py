@@ -150,6 +150,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# 指定静态文件加载路径
+# STATIC_URL = '/static/'
+
+# 配置静态文件加载路径
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 
 # 配置Redis数据库
 CACHES = {
