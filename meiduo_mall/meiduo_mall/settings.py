@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.users',
+    # 如果使用下面的方式需要改子应用里的aaps里的name
+    # 'apps.users.apps.UsersConfig' = apps.users
 ]
 
 MIDDLEWARE = [
